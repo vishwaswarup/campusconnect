@@ -17,9 +17,8 @@ const schema = new mongoose.Schema({
 schema.index({ title: 'text', body: 'text' });
 schema.index({ status: 1, publishAt: -1 });
 
-schema.pre('validate', function (next) {
+schema.pre('validate', function () {
   if (this.expiresAt && this.publishAt && this.expiresAt <= this.publishAt) this.invalidate('expiresAt', 'Expiry must be after the publish date');
-  next();
 });
 
 // Visibility rule shared by list, detail and dashboard queries.

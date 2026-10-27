@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/vendor/bootstrap.min.css"><link rel="stylesheet" href="/vendor/bootstrap-icons.min.css"><link rel="stylesheet" href="/css/style.css"><title>Login — Campus Connect</title></head><body>
+<main class="auth-wrap" id="main">
+  <aside class="auth-side"><a href="/" class="text-white text-decoration-none d-flex align-items-center gap-2 mb-5 fw-bold fs-4"><img src="/img/logo.svg" alt="" width="40" height="40"> Campus Connect</a>
+    <h2>Welcome back</h2><p class="text-white-50 mb-4">Sign in to see your events, notices and updates.</p>
+    <ul class="list-unstyled"><li><i class="bi bi-calendar-event"></i> &nbsp;Register for upcoming events</li><li><i class="bi bi-journal-text"></i> &nbsp;Download notes and papers</li><li><i class="bi bi-chat-square-text"></i> &nbsp;Track your complaints privately</li></ul></aside>
+  <section class="auth-form"><div class="inner">
+    <a href="/" class="d-lg-none d-flex align-items-center gap-2 mb-4 text-decoration-none fw-bold fs-5 text-dark"><img src="/img/logo.svg" alt="" width="34" height="34"> Campus Connect</a>
+    <h1 class="h3 fw-bold">Log in</h1><p class="text-secondary">Use your college email and password.</p>
+    <div id="formAlert" role="alert"></div>
+    <form id="loginForm" novalidate data-form="login">
+      <div class="mb-3"><label class="form-label req" for="email">College email</label><input class="form-control" id="email" name="email" type="email" autocomplete="username" required><div class="invalid-feedback"></div></div>
+      <div class="mb-3"><label class="form-label req" for="password">Password</label>
+        <div class="input-group"><input class="form-control" id="password" name="password" type="password" autocomplete="current-password" required><button class="btn btn-outline-secondary" type="button" data-toggle-pw="password" aria-label="Show password"><i class="bi bi-eye"></i></button><div class="invalid-feedback"></div></div></div>
+      <button class="btn btn-primary w-100 py-2" type="submit">Log in</button>
+    </form>
+    <p class="text-center text-secondary mt-4 mb-1">New to Campus Connect? <a href="/register.html">Create an account</a></p>
+    <p class="text-center small"><a href="/help.html">Forgot your password? Get help</a></p>
+  </div></section>
+</main>
+<script src="/vendor/bootstrap.bundle.min.js"></script><script type="module" src="/js/public.js"></script></body></html>

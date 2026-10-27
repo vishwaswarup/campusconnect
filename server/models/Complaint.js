@@ -18,12 +18,11 @@ schema.index({ student: 1, createdAt: -1 });
 schema.index({ status: 1, priority: 1 });
 schema.index({ title: 'text', description: 'text', ticketId: 'text' });
 
-schema.pre('validate', async function (next) {
+schema.pre('validate', function () {
   if (!this.ticketId) {
     // CC-YYYY-xxxxxx, random suffix keeps IDs unguessable and collision-free in practice
     this.ticketId = `CC-${new Date().getFullYear()}-${Math.random().toString(36).slice(2, 8).toUpperCase()}`;
   }
-  next();
 });
 
 module.exports = mongoose.model('Complaint', schema);

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campus Connect — Dashboard</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/vendor/bootstrap.min.css"><link rel="stylesheet" href="/vendor/bootstrap-icons.min.css"><link rel="stylesheet" href="/css/style.css">
+</head><body>
+<a class="skip-link" href="#view">Skip to content</a>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar" aria-label="Primary navigation">
+    <a class="brand" href="#/"><img src="/img/logo.svg" alt="" width="36" height="36"> Campus Connect</a>
+    <nav id="nav" class="nav flex-column pb-3"></nav>
+    <div class="sidebar-foot" id="sideFoot"></div>
+  </aside>
+  <div class="sidebar-backdrop" id="backdrop"></div>
+  <div class="main-col">
+    <header class="topbar">
+      <button class="btn btn-light d-lg-none" id="menuBtn" aria-label="Open menu" aria-controls="sidebar"><i class="bi bi-list fs-5"></i></button>
+      <h1 class="page-title flex-grow-1" id="pageTitle">Campus Connect</h1>
+      <div class="dropdown">
+        <button class="btn btn-light d-flex align-items-center gap-2" data-bs-toggle="dropdown" aria-expanded="false" id="userMenu"></button>
+        <ul class="dropdown-menu dropdown-menu-end shadow">
+          <li><a class="dropdown-item" href="#/profile"><i class="bi bi-person me-2"></i>My profile</a></li>
+          <li><a class="dropdown-item" href="/help.html" target="_blank" rel="noopener"><i class="bi bi-question-circle me-2"></i>Help</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><button class="dropdown-item text-danger" id="logoutBtn"><i class="bi bi-box-arrow-right me-2"></i>Log out</button></li>
+        </ul>
+      </div>
+    </header>
+    <main id="view" class="view" tabindex="-1" aria-live="polite"></main>
+  </div>
+</div>
+<noscript><div class="p-4">Campus Connect requires JavaScript.</div></noscript>
+<script src="/vendor/bootstrap.bundle.min.js"></script>
+<script src="/vendor/chart.umd.js"></script>
+<script type="module" src="/js/app.js"></script>
+</body></html>
