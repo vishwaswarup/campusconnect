@@ -31,7 +31,24 @@ Never run `npm run seed` in production.
 ## 4. Same-host vs split deployment
 Default is one origin (no CORS). If you host the frontend elsewhere, add its origin to `CORS_ORIGINS`; cookies would then need `SameSite=None; Secure`, which requires editing `server/app.js` — the single-origin setup is strongly recommended.
 
-## 5. Post-deploy verification checklist
+## 5. Progress checklist
+Done:
+- [x] MongoDB Atlas cluster, database user and network access (`0.0.0.0/0`) set up
+- [x] `MONGODB_URI` set in `.env` (never committed); demo data seeded into Atlas
+- [x] Code pushed and web service created on Render with environment variables
+- [x] Live site: https://campusconnect-yeio.onrender.com/ — `/api/health` OK, pages load, student login and dashboard OK (checked 2026-10-27)
+- [x] Demo accounts intentionally kept for the project demonstration
+
+Still to do:
+- [ ] Test on the live site: register a new student, log out and in again
+- [ ] Test on the live site: admin login works, and a student sees "Access denied" on `#/admin`
+- [ ] Test on the live site: upload a note as student, approve as admin, download it
+- [ ] Uploads: **no Render Disk is attached**, so uploaded files are deleted on every redeploy/restart (database records remain). Acceptable for a demo; remove the `UPLOAD_DIR` variable from Render if it points to `/var/data/uploads`, or attach a disk / use object storage for real use
+- [ ] Check the site on a phone and look for browser-console errors
+- [ ] Change the Atlas database password (it was shared in chat) and update `MONGODB_URI` in Render and `.env`
+- [ ] Optional: restrict Atlas Network Access from `0.0.0.0/0` to specific IPs
+
+## 6. Post-deploy verification checklist
 - [ ] `GET https://<host>/api/health` returns `{"status":"ok"}`
 - [ ] Register a test student, log in, log out
 - [ ] Admin login works; student gets "Access denied" on `#/admin`

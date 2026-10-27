@@ -14,12 +14,7 @@ npm run seed                  # demo data (WIPES the configured database)
 npm start                     # http://localhost:3000
 ```
 
-Demo accounts (created by `npm run seed`, development only):
-
-| Role    | Email                          | Password       |
-|---------|--------------------------------|----------------|
-| Admin   | admin@campusconnect.edu        | Admin@12345    |
-| Student | student@campusconnect.edu      | Student@123    |
+Demo accounts are created by `npm run seed` (development/demo only): `admin@campusconnect.edu` and `student@campusconnect.edu`. Their passwords are printed when the seed finishes and are defined in `scripts/seed.js`. Change or remove these accounts on any real deployment.
 
 `npm run dev` restarts on change · `npm test` runs the test suite.
 
