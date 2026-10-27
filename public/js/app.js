@@ -35,6 +35,8 @@ const ROUTES = [
   [/^\/admin\/memberships$/, 'admin/memberships', 'Membership Requests', true],
 ];
 
+// Bump together with the ?v= on app.js / style.css in the HTML pages and on the '../app.js?v=' imports.
+const ASSET_VERSION = '20261028';
 const getView = () => document.getElementById('view');
 let navToken = 0;
 
@@ -95,7 +97,7 @@ async function route() {
   el.innerHTML = spinner();
   cur.replaceWith(el);
   try {
-    const page = await import(`./pages/${mod}.js`);
+    const page = await import(`./pages/${mod}.js?v=${ASSET_VERSION}`);
     if (token !== navToken) return;
     el.innerHTML = '';
     await page.default({ el, params: match.params, user: state.user, meta: state.meta });

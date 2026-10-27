@@ -2,7 +2,7 @@ import { get, post, put, patch, del, qs } from '../../lib/api.js';
 import { esc, fmtDate, badge, tag, searchBox, selectOpts, formModal, confirmDialog, toast, toastError } from '../../lib/ui.js';
 import { adminList, actBtn } from '../../lib/adminTable.js';
 import { resourceFields } from '../../lib/resourceForm.js';
-import { refreshBadges } from '../../app.js';
+import { refreshBadges } from '../../app.js?v=20261028';
 
 export default function ({ el, meta }) {
   const state = { q: '', status: 'pending', department: '', page: 1 };

@@ -1,6 +1,6 @@
 import { get, patch, post, api } from '../lib/api.js';
 import { esc, fmtDate, fmtDateTime, badge, tag, toast, toastError, showErrors, selectOpts, emptyState, errorState, spinner } from '../lib/ui.js';
-import { updateUser, avatar } from '../app.js';
+import { updateUser, avatar } from '../app.js?v=20261028';
 
 export default async function ({ el, user, meta }) {
   let u = user;

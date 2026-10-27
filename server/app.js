@@ -59,7 +59,15 @@ function createApp() {
   app.use('/api', (req, res, next) => { res.set('Cache-Control', 'no-store'); next(); });
   app.use('/api', require('./routes'));
 
-  app.use(express.static(path.join(__dirname, '../public'), { extensions: ['html'], maxAge: config.isProd ? '1h' : 0 }));
+  // Code files revalidate on every load (ETag -> 304), so a deploy is visible immediately and the
+  // browser never mixes new HTML with old CSS/JS. Images and vendor libraries are cached for a day.
+  app.use(express.static(path.join(__dirname, '../public'), {
+    extensions: ['html'],
+    setHeaders: (res, file) => {
+      if (/\.(html|css|js)$/.test(file) && !file.includes(`${path.sep}vendor${path.sep}`)) res.setHeader('Cache-Control', 'no-cache');
+      else res.setHeader('Cache-Control', config.isProd ? 'public, max-age=86400' : 'no-cache');
+    },
+  }));
   app.use(notFoundHandler);
   app.use(errorHandler);
   return app;

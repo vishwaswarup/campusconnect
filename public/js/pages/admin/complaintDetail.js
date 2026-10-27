@@ -1,7 +1,7 @@
 import { get, patch, post } from '../../lib/api.js';
 import { esc, fmtDateTime, badge, tag, selectOpts, labelize, toast, toastError, showErrors, errorState } from '../../lib/ui.js';
 import { timeline } from '../../lib/timeline.js';
-import { refreshBadges } from '../../app.js';
+import { refreshBadges } from '../../app.js?v=20261028';
 
 export default async function ({ el, params, meta }) {
   const id = params[0];
