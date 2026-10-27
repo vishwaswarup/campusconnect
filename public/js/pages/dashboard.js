@@ -11,7 +11,7 @@ export default async function ({ el, user }) {
   const card = (title, href, body, linkText = 'View all') => `<div class="cc-card h-100"><div class="card-head"><h2>${title}</h2><a href="${href}" class="small fw-semibold text-decoration-none">${linkText} <i class="bi bi-arrow-right"></i></a></div>${body}</div>`;
 
   el.innerHTML = `
-  <div class="welcome mb-4"><h1>${greet}, ${esc(user.name.split(' ')[0])}! 👋</h1>
+  <div class="welcome mb-4"><div class="kicker">${new Date().toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long' })}</div><h1>${greet}, ${esc(user.name.split(' ')[0])}</h1>
     <p>${esc(user.department || '')}${user.course ? ' · ' + esc(user.course) : ''}${user.year ? ' · Year ' + user.year : ''}${user.studentId ? ' · ID ' + esc(user.studentId) : ''}</p></div>
   <div class="row g-3 mb-4">
     ${stat('#/events?tab=mine', 'bi-calendar-check', 'ic-indigo', d.stats.registeredEvents, 'Events registered')}

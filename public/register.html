@@ -1,11 +1,11 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/vendor/bootstrap.min.css"><link rel="stylesheet" href="/vendor/bootstrap-icons.min.css"><link rel="stylesheet" href="/css/style.css"><title>Register — Campus Connect</title></head><body>
 <main class="auth-wrap" id="main">
-  <aside class="auth-side"><a href="/" class="text-white text-decoration-none d-flex align-items-center gap-2 mb-5 fw-bold fs-4"><img src="/img/logo.svg" alt="" width="40" height="40"> Campus Connect</a>
-    <h2>Join your campus community</h2><p class="text-white-50 mb-4">One account for events, notes, clubs and more.</p>
-    <ul class="list-unstyled"><li><i class="bi bi-shield-check"></i> &nbsp;Passwords are securely hashed</li><li><i class="bi bi-lock"></i> &nbsp;Your complaints stay private</li><li><i class="bi bi-phone"></i> &nbsp;Works on any device</li></ul></aside>
+  <aside class="auth-side register"><a href="/" class="text-white text-decoration-none d-flex align-items-center gap-2 fw-semibold fs-4" style="font-family:var(--cc-serif)"><img src="/img/logo.svg" alt="" width="38" height="38"> Campus Connect</a>
+    <div><h2>Join your campus community.</h2><p>One account for events, notes, clubs and support. Your complaints stay private.</p></div>
+    <div class="credit">Photo: Unsplash</div></aside>
   <section class="auth-form"><div class="inner">
-    <a href="/" class="d-lg-none d-flex align-items-center gap-2 mb-4 text-decoration-none fw-bold fs-5 text-dark"><img src="/img/logo.svg" alt="" width="34" height="34"> Campus Connect</a>
-    <h1 class="h3 fw-bold">Create your account</h1><p class="text-secondary">Student registration. Admin accounts are created by the college.</p>
+    <a href="/" class="d-lg-none d-flex align-items-center gap-2 mb-4 text-decoration-none fw-semibold fs-5" style="font-family:var(--cc-serif);color:var(--cc-green-ink)"><img src="/img/logo.svg" alt="" width="32" height="32"> Campus Connect</a>
+    <h1>Create your account</h1><p class="text-secondary mb-4">Student registration. Administrator accounts are issued by the college.</p>
     <div id="formAlert" role="alert"></div>
     <form id="registerForm" novalidate data-form="register"><div class="row g-3">
       <div class="col-12"><label class="form-label req" for="name">Full name</label><input class="form-control" id="name" name="name" autocomplete="name" required maxlength="80"><div class="invalid-feedback"></div></div>
@@ -18,7 +18,7 @@
       <div class="col-md-6"><label class="form-label req" for="confirmPassword">Confirm password</label><input class="form-control" id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" required><div class="invalid-feedback"></div></div>
       <div class="col-12"><button class="btn btn-primary w-100 py-2" type="submit">Create account</button></div>
     </div></form>
-    <p class="text-center text-secondary mt-4">Already have an account? <a href="/login.html">Log in</a></p>
+    <p class="text-secondary mt-4 mb-0">Already have an account? <a href="/login.html">Log in</a></p>
   </div></section>
 </main>
 <script src="/vendor/bootstrap.bundle.min.js"></script><script type="module" src="/js/public.js"></script></body></html>
