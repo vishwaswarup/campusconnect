@@ -1,6 +1,6 @@
-import { get, post, put, del, qs } from '../../api.js';
-import { esc, fmtDateTime, badge, tag, searchBox, selectOpts, formModal, confirmDialog, infoModal, toast, toastError, fmtDate } from '../../ui.js';
-import { adminList, actBtn } from '../../adminTable.js';
+import { get, post, put, del, qs } from '../../lib/api.js';
+import { esc, fmtDateTime, badge, tag, searchBox, selectOpts, formModal, confirmDialog, infoModal, toast, toastError, fmtDate } from '../../lib/ui.js';
+import { adminList, actBtn } from '../../lib/adminTable.js';
 
 export default function ({ el, meta }) {
   const state = { q: '', status: '', when: 'all', page: 1 };

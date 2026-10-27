@@ -48,19 +48,28 @@ Passwords need 10+ characters with letters and digits. Running it for an existin
 ## Project structure
 
 ```
-server/
-  app.js, server.js          Express app (helmet CSP, sessions, sanitising, CORS) / bootstrap
+server/                      Backend (Express + Mongoose)
+  app.js, server.js          App setup (helmet CSP, sessions, sanitising, CORS) / bootstrap
   config/                    env config, constants (single source of enum values), db
   models/                    User, Event, EventRegistration, Resource, Announcement,
                              LostFoundItem, Complaint, ComplaintUpdate, Club, ClubMembership, ActivityLog
-  controllers/ routes/       one pair per module
-  middleware/                auth (authenticate/requireAdmin), upload (Multer + magic-byte check), security, error
-  utils/                     validate (whitelist validator), helpers (pagination, search), files, activity log
-public/                      landing, login, register, help, 403/404, app.html (SPA shell)
-  js/pages/, js/pages/admin/ one module per screen
-scripts/                     seed.js, create-admin.js
+  controllers/  routes/      one pair per module
+  middleware/                auth, upload (Multer + magic-byte check), security, error handling
+  utils/                     validation, pagination/search helpers, file helpers, activity log
+public/                      Frontend, served as static files
+  index.html, login.html, register.html, help.html, 403.html, 404.html   public pages
+  app.html                   SPA shell for the logged-in app (hash-routed)
+  css/style.css              design system
+  img/                       logo.svg, photos/ (hero, banners, side panels)
+  js/app.js, public.js       app router / public-page script
+  js/lib/                    shared helpers: api, ui, state, adminTable, timeline, form definitions
+  js/pages/                  one module per student screen
+  js/pages/admin/            one module per admin screen
+  vendor/                    Bootstrap, Bootstrap Icons, Chart.js (self-hosted)
+scripts/                     seed.js (demo data), create-admin.js
 tests/                       node:test suites (55 tests) against an isolated database
 docs/                        API.md, DEPLOYMENT.md
+uploads/                     runtime file storage (git-ignored; see DEPLOYMENT.md)
 ```
 
 ## Security design (summary)

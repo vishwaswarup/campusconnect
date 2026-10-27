@@ -1,6 +1,6 @@
-import { get, post, qs } from '../api.js';
-import { esc, fmtDate, timeAgo, badge, tag, spinner, emptyState, errorState, pager, bindFilters, searchBox, selectOpts, formModal, toast } from '../ui.js';
-import { lfFields } from '../lfForm.js';
+import { get, post, qs } from '../lib/api.js';
+import { esc, fmtDate, timeAgo, badge, tag, spinner, emptyState, errorState, pager, bindFilters, searchBox, selectOpts, formModal, toast } from '../lib/ui.js';
+import { lfFields } from '../lib/lfForm.js';
 
 export const lfCard = (i, mine) => `<div class="col-sm-6 col-xl-4"><div class="cc-card hover h-100 overflow-hidden">
   ${i.hasImage ? `<img class="thumb" loading="lazy" src="/api/lostfound/${i._id}/image" alt="Photo of ${esc(i.name)}">` : `<div class="thumb"><i class="bi bi-box-seam"></i></div>`}

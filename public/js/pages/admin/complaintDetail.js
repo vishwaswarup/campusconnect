@@ -1,6 +1,6 @@
-import { get, patch, post } from '../../api.js';
-import { esc, fmtDateTime, badge, tag, selectOpts, labelize, toast, toastError, showErrors, errorState } from '../../ui.js';
-import { timeline } from '../../timeline.js';
+import { get, patch, post } from '../../lib/api.js';
+import { esc, fmtDateTime, badge, tag, selectOpts, labelize, toast, toastError, showErrors, errorState } from '../../lib/ui.js';
+import { timeline } from '../../lib/timeline.js';
 import { refreshBadges } from '../../app.js';
 
 export default async function ({ el, params, meta }) {

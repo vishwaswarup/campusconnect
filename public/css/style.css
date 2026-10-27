@@ -112,7 +112,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: 3px solid r
 }
 
 /* Welcome banner with campus photo (flat colour multiplied into the photo, no gradient) */
-.welcome { position: relative; isolation: isolate; overflow: hidden; background-color: #1f4d3a; background-image: url(/img/dome.jpg); background-size: cover; background-position: center 24%; color: #fff; border-radius: var(--cc-radius); padding: 2rem 1.75rem; min-height: 200px; display: flex; flex-direction: column; justify-content: flex-end; }
+.welcome { position: relative; isolation: isolate; overflow: hidden; background-color: #1f4d3a; background-image: url(/img/photos/dome.jpg); background-size: cover; background-position: center 24%; color: #fff; border-radius: var(--cc-radius); padding: 2rem 1.75rem; min-height: 200px; display: flex; flex-direction: column; justify-content: flex-end; }
 .welcome::before { content: ""; position: absolute; inset: 0; background: rgba(10,32,22,.58); z-index: -1; }
 .welcome .kicker { text-transform: uppercase; letter-spacing: .12em; font-size: .72rem; font-weight: 700; color: var(--cc-brass); margin-bottom: .35rem; }
 .welcome h1 { color: #fff; font-size: 1.9rem; margin: 0; }
@@ -176,7 +176,7 @@ a.list-item:hover { background: #faf8f1; }
 .pub-nav .navbar-brand img { width: 34px; height: 34px; }
 .pub-nav .nav-link { color: var(--cc-ink); font-weight: 500; }
 .pub-nav .nav-link:hover { color: var(--cc-green); }
-.hero { position: relative; min-height: 600px; display: flex; align-items: center; color: #fff; background-color: #10281d; background-image: url(/img/hero-green.jpg); background-size: cover; background-position: center; padding: 4.5rem 0; isolation: isolate; }
+.hero { position: relative; min-height: 600px; display: flex; align-items: center; color: #fff; background-color: #10281d; background-image: url(/img/photos/hero-green.jpg); background-size: cover; background-position: center; padding: 4.5rem 0; isolation: isolate; }
 .hero::before { content: ""; position: absolute; inset: 0; background: rgba(8,24,17,.5); z-index: -1; }
 .hero .container > * { max-width: 520px; }
 .hero .kicker, .kicker { text-transform: uppercase; letter-spacing: .14em; font-size: .75rem; font-weight: 700; color: var(--cc-brass); }
@@ -200,11 +200,11 @@ a.list-item:hover { background: #faf8f1; }
 .role-card { background: #fff; border: 1px solid var(--cc-line); border-radius: var(--cc-radius); padding: 1.5rem; height: 100%; }
 .role-card ul { padding-left: 1.1rem; margin: .75rem 0 0; color: var(--cc-muted); }
 .role-card li { margin-bottom: .4rem; }
-.cta-band { position: relative; isolation: isolate; color: #fff; text-align: center; padding: 6rem 0; background-color: #1f4d3a; background-image: url(/img/footer.jpg); background-size: cover; background-position: center 52%; }
+.cta-band { position: relative; isolation: isolate; color: #fff; text-align: center; padding: 6rem 0; background-color: #1f4d3a; background-image: url(/img/photos/footer.jpg); background-size: cover; background-position: center 52%; }
 .cta-band::before { content: ""; position: absolute; inset: 0; background: rgba(8,24,17,.6); z-index: -1; }
 .cta-band h2 { color: #fff; max-width: 20ch; margin: .5rem auto 1rem; }
 .cta-band p { color: #dfe8e2; max-width: 520px; margin: 0 auto 1.5rem; }
-.page-banner { background-color: #2a3a32; background-image: url(/img/students.jpg); background-size: cover; background-position: center 35%; background-blend-mode: multiply; color: #fff; padding: 3.5rem 0; }
+.page-banner { background-color: #2a3a32; background-image: url(/img/photos/students.jpg); background-size: cover; background-position: center 35%; background-blend-mode: multiply; color: #fff; padding: 3.5rem 0; }
 .page-banner h1 { color: #fff; }
 .page-banner p { color: #dfe8e2; margin: 0; }
 .footer { background: var(--cc-green-ink); color: #a9bdb0; padding: 2.5rem 0; font-size: .9rem; }
@@ -214,8 +214,8 @@ a.list-item:hover { background: #faf8f1; }
 /* Auth pages */
 .auth-wrap { min-height: 100vh; display: grid; grid-template-columns: 5fr 6fr; }
 .auth-side { color: #fff; padding: 3rem; display: flex; flex-direction: column; justify-content: space-between; background-color: #2a3d33; background-size: cover; background-position: center; background-blend-mode: multiply; }
-.auth-side.login { background-image: url(/img/library.jpg); }
-.auth-side.register { background-image: url(/img/graduation.jpg); background-position: center 60%; }
+.auth-side.login { background-image: url(/img/photos/library.jpg); }
+.auth-side.register { background-image: url(/img/photos/graduation.jpg); background-position: center 60%; }
 .auth-side h2 { color: #fff; font-size: 2.1rem; max-width: 16ch; }
 .auth-side p { color: #e3ebe5; max-width: 38ch; }
 .auth-side .credit { font-size: .72rem; color: #c3d1c8; }

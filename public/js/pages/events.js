@@ -1,5 +1,5 @@
-import { get, post, del, qs } from '../api.js';
-import { esc, fmtDateTime, dayMonth, badge, tag, spinner, emptyState, errorState, pager, bindFilters, searchBox, selectOpts, toast, toastError } from '../ui.js';
+import { get, post, del, qs } from '../lib/api.js';
+import { esc, fmtDateTime, dayMonth, badge, tag, spinner, emptyState, errorState, pager, bindFilters, searchBox, selectOpts, toast, toastError } from '../lib/ui.js';
 
 export function eventCard(e) {
   const dm = dayMonth(e.startAt);

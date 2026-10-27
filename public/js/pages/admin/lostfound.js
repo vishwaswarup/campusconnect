@@ -1,6 +1,6 @@
-import { get, patch, del, qs } from '../../api.js';
-import { esc, fmtDate, badge, tag, searchBox, selectOpts, confirmDialog, toast, toastError } from '../../ui.js';
-import { adminList, actBtn } from '../../adminTable.js';
+import { get, patch, del, qs } from '../../lib/api.js';
+import { esc, fmtDate, badge, tag, searchBox, selectOpts, confirmDialog, toast, toastError } from '../../lib/ui.js';
+import { adminList, actBtn } from '../../lib/adminTable.js';
 
 export default function ({ el, meta }) {
   const state = { q: '', type: '', status: '', flagged: '', page: 1 };

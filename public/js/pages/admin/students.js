@@ -1,6 +1,6 @@
-import { get, patch } from '../../api.js';
-import { esc, fmtDate, badge, searchBox, selectOpts, formModal, confirmDialog, toast, toastError } from '../../ui.js';
-import { adminList, actBtn } from '../../adminTable.js';
+import { get, patch } from '../../lib/api.js';
+import { esc, fmtDate, badge, searchBox, selectOpts, formModal, confirmDialog, toast, toastError } from '../../lib/ui.js';
+import { adminList, actBtn } from '../../lib/adminTable.js';
 
 export default function ({ el, meta, user }) {
   const state = { q: '', department: '', active: '', page: 1 };

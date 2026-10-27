@@ -1,6 +1,6 @@
-import { get, qs } from '../../api.js';
-import { esc, fmtDate, timeAgo, badge, tag, searchBox, selectOpts, labelize } from '../../ui.js';
-import { adminList } from '../../adminTable.js';
+import { get, qs } from '../../lib/api.js';
+import { esc, fmtDate, timeAgo, badge, tag, searchBox, selectOpts, labelize } from '../../lib/ui.js';
+import { adminList } from '../../lib/adminTable.js';
 
 export default function ({ el, meta }) {
   const state = { q: '', status: 'open', priority: '', category: '', sort: 'priority', page: 1 };

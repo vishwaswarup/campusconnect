@@ -1,5 +1,5 @@
-import { get, post, qs } from '../api.js';
-import { esc, fmtDate, timeAgo, badge, tag, spinner, emptyState, errorState, pager, bindFilters, searchBox, selectOpts, formModal, toast } from '../ui.js';
+import { get, post, qs } from '../lib/api.js';
+import { esc, fmtDate, timeAgo, badge, tag, spinner, emptyState, errorState, pager, bindFilters, searchBox, selectOpts, formModal, toast } from '../lib/ui.js';
 
 export default async function ({ el, meta }) {
   const params = new URLSearchParams(location.hash.split('?')[1] || '');

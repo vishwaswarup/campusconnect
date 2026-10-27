@@ -1,6 +1,6 @@
-import { get, post, qs } from '../api.js';
-import { esc, fmtDate, timeAgo, badge, tag, spinner, emptyState, errorState, pager, bindFilters, searchBox, selectOpts, formModal, toast, fmtSize } from '../ui.js';
-import { resourceFields } from '../resourceForm.js';
+import { get, post, qs } from '../lib/api.js';
+import { esc, fmtDate, timeAgo, badge, tag, spinner, emptyState, errorState, pager, bindFilters, searchBox, selectOpts, formModal, toast, fmtSize } from '../lib/ui.js';
+import { resourceFields } from '../lib/resourceForm.js';
 
 export const resourceCard = (r, mine) => `<div class="col-md-6 col-xl-4"><div class="cc-card hover h-100 p-3 d-flex flex-column">
   <div class="d-flex gap-3"><i class="bi bi-file-earmark-${r.file.ext === 'pdf' ? 'pdf' : 'text'} fs-1 text-primary"></i>

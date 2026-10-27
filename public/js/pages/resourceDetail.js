@@ -1,5 +1,5 @@
-import { get, del } from '../api.js';
-import { esc, fmtDate, fmtSize, badge, tag, confirmDialog, toast, toastError, errorState } from '../ui.js';
+import { get, del } from '../lib/api.js';
+import { esc, fmtDate, fmtSize, badge, tag, confirmDialog, toast, toastError, errorState } from '../lib/ui.js';
 
 export default async function ({ el, params, user }) {
   let r;

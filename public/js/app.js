@@ -1,6 +1,6 @@
-import { get, post } from './api.js';
-import { state, isAdmin } from './state.js';
-import { $, $$, esc, initials, spinner, toast } from './ui.js';
+import { get, post } from './lib/api.js';
+import { state, isAdmin } from './lib/state.js';
+import { $, $$, esc, initials, spinner, toast } from './lib/ui.js';
 
 const STUDENT_NAV = [
   ['#/dashboard', 'bi-grid-1x2-fill', 'Dashboard'], ['#/events', 'bi-calendar-event', 'Events'], ['#/resources', 'bi-journal-text', 'Notes & Resources'],

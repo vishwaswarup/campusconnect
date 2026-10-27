@@ -1,5 +1,5 @@
-import { get, post, del, qs } from '../api.js';
-import { esc, badge, tag, spinner, emptyState, errorState, pager, bindFilters, searchBox, selectOpts, formModal, confirmDialog, toast, toastError } from '../ui.js';
+import { get, post, del, qs } from '../lib/api.js';
+import { esc, badge, tag, spinner, emptyState, errorState, pager, bindFilters, searchBox, selectOpts, formModal, confirmDialog, toast, toastError } from '../lib/ui.js';
 
 export default async function ({ el, meta }) {
   const state = { q: '', category: '', page: 1 };
@@ -41,7 +41,7 @@ export default async function ({ el, meta }) {
         async onSubmit(v) { await post(`/clubs/${c._id}/join`, v); toast('Request sent. You will see the decision here.'); load(); } });
       if (b.dataset.act === 'withdraw' && await confirmDialog({ title: c.membershipStatus === 'approved' ? 'Leave this club?' : 'Withdraw request?', message: c.name, confirmText: 'Confirm', danger: true })) { await del(`/clubs/${c._id}/join`); toast('Done', 'info'); load(); }
       if (b.dataset.act === 'info') {
-        const { infoModal } = await import('../ui.js');
+        const { infoModal } = await import('../lib/ui.js');
         infoModal(c.name, `<p>${esc(c.description)}</p><dl><dt>Faculty coordinator</dt><dd>${esc(c.coordinator)}${c.coordinatorEmail ? ` · <a href="mailto:${esc(c.coordinatorEmail)}">${esc(c.coordinatorEmail)}</a>` : ''}</dd><dt>Meets</dt><dd>${esc(c.meetingSchedule || 'To be announced')}</dd><dt>Activities</dt><dd>${(c.activities || []).map((a) => `<span class="badge badge-soft b-indigo me-1">${esc(a)}</span>`).join('') || '—'}</dd></dl>`, '');
       }
     } catch (err) { toastError(err); }

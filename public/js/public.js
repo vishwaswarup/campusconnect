@@ -1,5 +1,5 @@
-import { api, get, post } from './api.js';
-import { $, $$, showErrors } from './ui.js';
+import { api, get, post } from './lib/api.js';
+import { $, $$, showErrors } from './lib/ui.js';
 
 // Switch nav buttons when already logged in
 (async () => {

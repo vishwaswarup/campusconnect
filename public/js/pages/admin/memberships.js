@@ -1,6 +1,6 @@
-import { get, patch, qs } from '../../api.js';
-import { esc, fmtDate, badge, selectOpts, confirmDialog, toast, toastError } from '../../ui.js';
-import { adminList, actBtn } from '../../adminTable.js';
+import { get, patch, qs } from '../../lib/api.js';
+import { esc, fmtDate, badge, selectOpts, confirmDialog, toast, toastError } from '../../lib/ui.js';
+import { adminList, actBtn } from '../../lib/adminTable.js';
 import { refreshBadges } from '../../app.js';
 
 export default async function ({ el, meta }) {

@@ -1,5 +1,5 @@
-import { get, patch, post, api } from '../api.js';
-import { esc, fmtDate, fmtDateTime, badge, tag, toast, toastError, showErrors, selectOpts, emptyState, errorState, spinner } from '../ui.js';
+import { get, patch, post, api } from '../lib/api.js';
+import { esc, fmtDate, fmtDateTime, badge, tag, toast, toastError, showErrors, selectOpts, emptyState, errorState, spinner } from '../lib/ui.js';
 import { updateUser, avatar } from '../app.js';
 
 export default async function ({ el, user, meta }) {

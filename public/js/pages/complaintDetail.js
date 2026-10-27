@@ -1,6 +1,6 @@
-import { get, post } from '../api.js';
-import { esc, fmtDateTime, badge, tag, formModal, toast, toastError, errorState, spinner } from '../ui.js';
-import { timeline } from '../timeline.js';
+import { get, post } from '../lib/api.js';
+import { esc, fmtDateTime, badge, tag, formModal, toast, toastError, errorState, spinner } from '../lib/ui.js';
+import { timeline } from '../lib/timeline.js';
 
 export default async function ({ el, params }) {
   const id = params[0];

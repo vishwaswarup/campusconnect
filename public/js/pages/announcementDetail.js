@@ -1,5 +1,5 @@
-import { get } from '../api.js';
-import { esc, fmtDateTime, tag, errorState } from '../ui.js';
+import { get } from '../lib/api.js';
+import { esc, fmtDateTime, tag, errorState } from '../lib/ui.js';
 
 export default async function ({ el, params }) {
   let a;

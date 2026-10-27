@@ -1,5 +1,5 @@
-import { get, post, del } from '../api.js';
-import { esc, fmtDateTime, fmtDate, badge, tag, confirmDialog, toast, toastError, errorState } from '../ui.js';
+import { get, post, del } from '../lib/api.js';
+import { esc, fmtDateTime, fmtDate, badge, tag, confirmDialog, toast, toastError, errorState } from '../lib/ui.js';
 
 export default async function ({ el, params }) {
   const id = params[0];

@@ -1,5 +1,5 @@
-import { get, qs } from '../api.js';
-import { esc, fmtDate, timeAgo, tag, spinner, emptyState, errorState, pager, bindFilters, searchBox, selectOpts } from '../ui.js';
+import { get, qs } from '../lib/api.js';
+import { esc, fmtDate, timeAgo, tag, spinner, emptyState, errorState, pager, bindFilters, searchBox, selectOpts } from '../lib/ui.js';
 
 export const annItem = (a) => `<a class="list-item" href="#/announcements/${a._id}"><div class="flex-grow-1 min-w-0">
   <p class="item-title">${a.pinned ? '<i class="bi bi-pin-angle-fill pin" title="Pinned"></i> ' : ''}${esc(a.title)}</p>

@@ -1,6 +1,6 @@
-import { get, put, patch, post, del } from '../api.js';
-import { esc, fmtDate, timeAgo, badge, tag, confirmDialog, formModal, toast, toastError, errorState } from '../ui.js';
-import { lfFields } from '../lfForm.js';
+import { get, put, patch, post, del } from '../lib/api.js';
+import { esc, fmtDate, timeAgo, badge, tag, confirmDialog, formModal, toast, toastError, errorState } from '../lib/ui.js';
+import { lfFields } from '../lib/lfForm.js';
 
 export default async function ({ el, params, user, meta }) {
   const id = params[0];
@@ -50,6 +50,6 @@ export default async function ({ el, params, user, meta }) {
       }
     } catch (err) { toastError(err); }
   });
-  const putForm = (fd) => fetch('/api/lostfound/' + id, { method: 'PUT', body: fd, credentials: 'same-origin' }).then(async (r) => { const j = await r.json(); if (!r.ok) { const { ApiError } = await import('../api.js'); throw new ApiError(r.status, j.message, j.errors); } });
+  const putForm = (fd) => fetch('/api/lostfound/' + id, { method: 'PUT', body: fd, credentials: 'same-origin' }).then(async (r) => { const j = await r.json(); if (!r.ok) { const { ApiError } = await import('../lib/api.js'); throw new ApiError(r.status, j.message, j.errors); } });
   await draw();
 }
