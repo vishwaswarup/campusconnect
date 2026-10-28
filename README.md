@@ -95,7 +95,7 @@ uploads/                     runtime file storage (git-ignored; see DEPLOYMENT.m
 
 ## Troubleshooting
 
-| Symptom | Fix |
+| Symptom |
 |---|---|
 | `Failed to start: connect ECONNREFUSED` | MongoDB isn't running or `MONGODB_URI` is wrong |
 | App refuses to start in production | Set `SESSION_SECRET` (32+ chars) and `MONGODB_URI` |
